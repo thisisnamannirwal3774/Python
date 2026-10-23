@@ -1,0 +1,110 @@
+1. What is a Class ?
+Solution. A class is a blueprint or design used to create objects. Imagine you want to make three cars. All cars can have a color, brand, and speed.
+Instead of writing separate code for every car, you create one class called Car. 
+
+Code:
+
+Class Car:
+      color = "red"
+      brand = "BMW"
+
+Here, Car is the class and it describes the properties of the Car.
+
+2. What is an Object?
+Solution. An object is an actual thing created using a class. Let's create an object from our Car class.
+
+Code:
+
+Class Car:
+      color = "red"
+      brand = "BMW"
+car1 = Car()
+print(car1.color)
+print(car1.brand)
+
+Output of Code:
+
+red
+BMW
+
+Let's understand each line.
+
+   Class Car: Creates a Class
+   car1 = Car() Creates an Object
+   car1.color accesses the color of that object
+   car1.brand accesses its brand 
+
+3. One Class can create many objects.
+
+   Imagine you want three Students.
+
+Code:
+
+Class Student:
+      def __init__(self, name):
+          self.name = name
+s1 = Student("Aman")
+s2 = Student("Priya")
+s3 = Student("Rahul")
+print(s1.name)
+print(s2.name)
+print(s3.name)
+
+Output of the Code:
+
+Aman 
+Priya 
+Rahul
+
+4. One class creates three different "Student" objects.
+
+                                                   Class Student
+1. s1 (Aman)                       
+2. s2 (Priya)
+3. s3 (Rahul)
+
+Important point - The class is the "same" but each object can have different "data".
+
+5. What are "self" and "__init__" ?
+
+Code:
+
+Class Student:
+      def __init__(self, name):
+          self.name=name
+s1 = Student("Rahul")
+
+About the Code:
+
+__init__ : Sets up the object's data when you create it.
+self : Refers to particular object being created or used.
+self.name=name : Stores the given name inside that object.
+
+For Example : Student("Rahul") stores Rahul's name, while Student("Aman") stores Aman's name.
+
+6. Example of the Classes and Object
+
+Code: 
+
+Class Mobile:
+      def __init__(self, brand):
+             self.brand=brand
+m1 = Mobile("Apple")
+m2 = Mobile("Samsung")
+print(m1.brand)
+print(m2.brand)
+
+Output of the Code:
+
+Apple
+Samsung 
+
+About the Code: m1 and m2 are two different objects and each storing its own brand.
+
+The most important thing to remember:
+
+Class = "Blueprint"
+Object = "Actual Instance made from the blueprint"
+
+
+
