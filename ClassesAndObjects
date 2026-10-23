@@ -106,5 +106,85 @@ The most important thing to remember:
 Class = "Blueprint"
 Object = "Actual Instance made from the blueprint"
 
+7. Example 
+
+Code:
+
+class student:
+      subject = "Maths"
+      marks = 65
+      name = "NamanNirwal"
+
+Output of the Code:
+
+#no output
+
+8. Example 
+
+Code:
+
+class student:
+      subject = "English"
+      marks = 75
+      name = "Aman"
+s1 = student()
+print(s1.subject)
+print(s1.marks)
+print(s1.name)
+
+Output of the Code is :
+
+English
+75 
+Aman
+
+What is happening in the above Code ?
+Line 1: I have create a Class "Student". Think of it as a blueprint of the student.
+Line 2 to 4: We are defining three class Attributes. 
+Subject Stores "English"
+Marks Stores 75
+name stores "Aman"
+Line 5: We are Creating an object s1 from the student class.
+Line 6 to 8: we are accessing the attributes through the object s1 and printing their values. 
+
+9. Example 
+
+Code:
+
+class student:
+      def __init__(self, name):
+              self.name = name
+s1 = student("NamanNirwal")
+print(s1.name)
+
+Output of the above code:
+
+NamanNirwal
+
+What is happening in the above Code ?
+Line 1: Creating  a class named "Student". Think of it as a blueprint for creating student objects.
+Line 2 to 3: the __init__ method -> this method runs automatically when you create a new object. 
+Its accepts two parameters.
+1. Self -> refers to the object being created.
+2. name -> receives the name provide you when creating the object.
+Line 3: Storing the name 
+self.name = name 
+This is the most important line.
+self.name is the name attribute stored in the object
+name is the value received by the method 
+when we write student("NamanNirwal") ---> the value "NamanNirwal" passed to the name.
+Therefore, python stores "NamanNirwal" in self.name. 
+Line 4: Creating the object
+s1 = student("NamanNirwal")
+here are three important things happen :
+1. Python creates a new object S1.
+2. Python automatically calls __init__ method and passes "NamanNirwal" as the "name" argument.
+3. self.name stores that value and object is assigned to s1. 
+Line 5: Printing the name.
+Python accesses the name attribute of object s1 and prints its value.
+
+
+
+
 
 
