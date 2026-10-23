@@ -1,0 +1,369 @@
+The goal is not just to memorize code. The goal is to understand why functions exist, how they work, and when to use them. 
+
+1. What is a Function ?
+Solution. A function is a reusable block of code that performs a particular task. Imagine you want to print "Hello, Naman" ten times,
+You could write print ten times or you could create one function and use it 10 times.
+
+Code without using a function:
+
+print("Hello Naman")
+print("Hello Naman")
+print("Hello Naman")
+
+Output of the Code:
+
+Hello Naman
+Hello Naman 
+Hello Naman
+
+This code prints Hello Naman three times without using the function.
+
+Code using a function:
+
+def greet():
+    print("Hello Naman")
+greet()
+greet()
+greet()
+
+Output of the Code:
+
+Hello Naman
+Hello Naman 
+Hello Naman
+
+The version which uses a function is easier to use and easy to maintable.
+
+2. Syntax of the function ?
+Solution. 
+
+code:
+
+def greet():
+    print("Hello Naman")
+greet()
+
+Now the explanation of the syntax is as following:
+
+def --> a keyword that tells python you are defining a function
+greet --> The name of the function. You choose the name.
+() --> Holds "Parameters" when the function needs input. It can be empty.
+: --> Marks the begining of the function body
+greet() --> calls the function and execute its body.
+
+VERY IMPORTANT --> DEFINING A FUNCTION DOES NOT NORMALLY RUNS ITS BODY. CALLING ITS DOES.
+
+3. Function with parameters
+
+Suppose you want to greet different people. Instead of creating a separate function for every person, you can pass a name. 
+
+Code:
+
+def greet(name):
+    print("Hello", name)
+greet("Naman")
+greet("Rahul")
+greet("Priya")
+
+Output of this code is as following:
+
+Hello Naman
+Hello Rahul
+Hello Priya 
+
+About the code: Here "name" is the parameter and "Naman" is an argument. Think of the parameter as an empty box waiting to receive a value.
+
+4. Function with multiple parameters 
+
+A function can accept more than one input. 
+
+Code:
+
+def add(a,b):
+    print(a+b)
+add(12, 13)
+add(12, 12)
+
+Output of the code:
+
+25
+24
+
+About the Code: When add(12,13) runs: a receives 12 and b receives 13. a+b calculates 25. print() displays the result.
+About the Code: When add(12,12) runs: a receives 12 and b receives 12. a+b calcualtes 24. print() displays the result.
+
+5. The "Return" statement
+
+This is one of the most important concepts in python fucntions.
+
+Code: 
+
+def add(a,b):
+    return a+b
+result=add(10,20)
+print(result)
+
+Output of the Code:
+
+30
+
+About the Code: "Return" sends a value back to the caller, So you can store it, print it, or use it in another calculation.
+
+Code:
+
+def first():
+    print(10)
+def second():
+    return 10
+x=first()
+y=second()
+print(x)
+print(y)
+
+Output of the Code:
+
+10
+None
+10
+
+About the Code: first() prints 10 but does not return a value. Python therefore returns None by default. second() returns a value 10.
+Remember: print() displays a value. Return gives a value back to the calling code.
+
+6. Default Parameters
+
+Sometimes you want a function to use a default value when no argument is provided.
+
+Code:
+
+def greet(name="Friend"):
+    print("Hello ", name)
+greet()
+greet("Naman")
+
+Output of the Code:
+
+Hello Friend
+Hello Naman
+
+About the Code: In the first call, python uses "Friend" because you did not supply a name.
+
+7. Keyword Arguments
+
+You can pass arguments by "Specifying" their parameter names.
+
+Code:
+
+def student(name, marks):
+    print(name, marks)
+student(marks=75, name="NamanNirwal")
+
+Output of the Code is as following:
+
+NamanNirwal 75
+
+About the Code: The order does not matter when you explicitly use the parameter names, provided you follow the Python's arguments rules.
+
+8. Positional Arguments
+
+When you pass the arguments according to their position, python assigns them in that order.
+
+Code:
+
+def introduce(name, age):
+    print(name, age)
+introduce("NamanNirwal", 22)
+
+Output of the code:
+
+NamanNirwal 22
+
+About the Code: "NamanNirwal" goes to name, and 22 goes to age.
+
+9. Local and global variable 
+
+A variable created inside a function is normally local to that function.
+
+Code:
+
+x=100
+def show():
+    y=20
+    print(x)
+    print(y)
+show()
+print(x)
+
+Output of this Code:
+
+100
+20
+100
+
+About the Code: X is a global variable, accessible inside the function.
+y is a local variable, accessible inside show() but not normally outside it. 
+IMPORTANT - For Example: print(y) outside the function would cause a NameError.
+
+10. Returning Multiple Values.
+
+Python functions can return more than one values.
+
+Code:
+
+def calculate(a,b):
+    return a+b, a-b, a*b
+summ, subt, mult = calculate(20,10)
+print(summ)
+print(subt)
+print(mult)
+
+Output of the Code:
+
+30
+10
+200
+
+About the Code: Python Packs these return values into a tuple, which can be unpacked into separate variables.
+
+11. IMPORTANT - Arbitrary Arguments *args
+
+What if you dont know how many numbers the user will provide ? 
+Solution. Use Args. 
+
+Code:
+
+def add(*numbers):
+    return sum(numbers)
+print(add(10,20))
+print(add(10,20,30))
+print(add(1,2,3,4,5))
+
+Output of the Code:
+
+30
+60
+15
+
+About the Code: Args Collects extra positional arguments into a tuple.
+
+12. IMPORTANT - Arbitrary Keyword Arguments **kwargs
+
+Use **kwargs when you want to accept an arbitrary number of named arguments. 
+
+Code:
+
+def pt(**details):
+    print(details)
+pt(Name="NamanNirwal", age=22, Class="First")
+
+
+Output of the Code:
+
+{'Name': 'NamanNirwal', 'age': 22, 'class': 'First'}
+
+About the Code: **kwargs collects these arguments into a dictionary.
+
+13. Lambda functions 
+
+A lambda is a small anonymous function, often used for a short operation. 
+
+Normal Code:
+
+def square(x):
+    return x*x
+
+Lambda equivalent:
+
+square = lambda x: x*x
+print(square(10))
+
+Output of the Code:
+
+100
+
+About the Code: Use lambda for simple expressions. For more complex logic, a normal def function is usually clearer.
+
+14. Recursive functions 
+
+A recursive function calls itself.
+
+For example: Calculating a factorial 5! = 5*4*3*2*1 = 120
+
+Code:
+#remember this code
+def factorial(n):
+    if n==0:
+       return 1
+    return n*factorial(n-1)
+print(factorial(5))
+
+Output of the Code:
+
+120
+
+About the Code: 
+
+Two things make recursion work:
+
+1. Base case: Stops the function, here when n==0
+2. Recursive Case : calls the function again with the smaller value
+
+IMPORTANT - without proper base case, recursion can continue until python raises a RecursionError
+
+15. Functions calling other functions 
+
+One function can use another function.
+
+Code:
+
+def square(n):
+    return n*n
+def double_square(n):
+    return 2*square(n)
+print(double_square(4))
+
+Output of this Code:
+
+32
+
+About the Code: This is useful for breaking a large text into smaller, manageable tasks.
+
+16. IMPORTANT - Functions are objects in Python
+
+In Python, a function can be stored in a variable and called through that variable.
+
+Code:
+
+def greet():
+    print("Hello NamanNirwal")
+x=greet
+x()
+
+Output of this Code:
+
+Hello NamanNirwal
+
+About the Code: In this, a function can be stored in a variable and called through that variable.
+Notice that x=greet does not have parentheses. Its assign the function itself to x. Writing x() calls it.
+This is the foundation of first class functions, which let you pass functions around like other values.
+
+Code:
+
+def printt(a,b,c):
+    print(a+b+c)
+x=printt
+x(1,2,3)
+
+Output of the Code:
+
+6
+
+
+
+
+
+
+
+
+
+
+
