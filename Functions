@@ -357,6 +357,45 @@ Output of the Code:
 
 6
 
+17. Docstrings
+
+A docstrings explains what a function does.
+
+Code:
+
+def square(n):
+    """Return the square of a number."""
+    return n*n
+print(square.__doc__)
+
+Output: 
+
+Return the square of a number.
+
+About the Code: Docstrings are particularly helpful when writing large programs or working in teams.
+
+18. Exception handling inside functions 
+
+Functions can encounter errors. You can handle expected errors with try and except.
+
+Code:
+
+def divide(a,b):
+    try:
+        return a/b
+    except ZeroDivisionError:
+        return "Cannot divide by Zero"
+print(divide(10,0))
+print(divide(10,2))
+
+Output:
+
+Cannot divide by Zero
+5.0
+
+About the code: This makes the function handle zero by division gracefully instead of allowing that error to interrupt normal execution.
+
+
 
 
 
