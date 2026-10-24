@@ -100,7 +100,67 @@ print(branch) #CSE
 
 IMPORTANT POINT --> the number of variables must match the number of elements unless you use starred unpacking.
 
+Code: 
+
+numbers=(10,20,30,40,50)
+first, *middle, last=numbers
+print(first)
+print(middle)
+print(last)
+
+Output:
+
+10 
+[20,30,40] #important point is that this is list
+50
+
+IMPORTANT -> Notice that middle is a list, even though source is a tuple.
+
+6. returning multiple values from a function 
+
+Python functions can return several values by returning a tuple.
+
 Code:
+
+def calculate(a,b):
+    return a+b, a-b
+addition, subtraction = calculate(10,5)
+print(addition) #15
+print(subtraction) #5
+
+This pattern is widely used in real python programs.
+
+7. VERY IMPOrtant --> Can a tuple contains the list ?
+solution. YEs. A tuple cannot have its element assigned, but a mutable object inside it can still be changed.
+
+Code:
+
+data=(10,20,[30,40],50)
+data[2].append(45)
+print(data)
+
+Output:
+
+(10,20,[30,40,45],50)
+
+IMPORTANT --> This is a subtle but important distinction: an immutable tuple does not make every object inside it immutable.
+
+8. When we should use Tuples ?
+Solution. USE tuples when -
+1. You want a fixed group of related values.
+2. you want to return multiple values from a function
+3. you represent coordinates such as (x,y)
+4. you want an immutable sequence. 
+
+A tuple can be used as a dictionary key if all its elements are hashable. a tuple containing a list, for example, cannot be used as a dictionary key.
+
+Tuple time Complexity                                     Typical time 
+access by index                                              O(1)
+search for a value                                           O(n)
+count occurences                                             O(n)
+create a tuple                                               o(n)
+
+VERY IMPORTANT -> Tuple immutability makes it useful for a fixed data, but it does not automatically make every tuple operation faster than its list equivalent. 
 
 
 
