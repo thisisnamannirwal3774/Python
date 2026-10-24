@@ -1,0 +1,105 @@
+Let's learn the four most important data structures in simple langauge, with examples, real-life comparisons, and practice questions.
+
+The four data structures are List, Dictionary, Set, Tuples.
+
+List [] --> A collection of items that is ordered and changeable. Duplicate values are allowed.
+Example: A list of your subjects
+Tuple () --> A ordered collection that cannot be changed after creation. Duplicate values are allowed.
+Example: Fixed GPS coordinates
+Dictionary {} --> Stores information as key-value pairs. 
+Example: A student record containing name, age and marks.
+Set () --> A collection of unique elements. Duplicate values are automatically removed.
+Example: Keeping only unique student IDs.
+
+1. Understand the difference between List, Tuple, Dictionary, Set.
+Solution. 
+
+Feature      List        Tuple       Dictionary               Set 
+Syntax       []           {}           {key: value}           {} or set()
+ordered      Yes          Yes        Yes, Insertion order     No guaranteed order
+Changeable   Yes          No             Yes                      Yes 
+Duplicates    Yes          Yes       Keys: no, values: yes      No
+Access by index Yes       Yes           Yes by keys               No
+Main purpose Store sequences  Fixed Sequences Maps keysto values    Unique items 
+
+IMPORTANT POINT TO REMEMBER --> Lists are flexible, tuples are fixed, dictionaries connect keys to values and sets remove duplicates.
+
+2. What is a List ?
+Solution. A list store multiple values in a single variable.
+
+Code (WITHOUT THE LIST):
+
+subject1 = "Python"
+subject2 = "Maths"
+subject3 = "Statistics"
+
+Code (WITH THE HELP OF LIST):
+
+subjects = ["Python", "Maths", "Statistics"]
+print(subjects)
+
+OUTPUT of the Code:
+
+['Python' ,'Maths', 'Statistics']
+
+IMPORTANT POINT - A list can contain integers, strings, decimal numbers, Boolean values, and even other lists.
+
+Code:
+
+data = [10, "Python", 3.14, True]
+print(data)
+
+Output of the Code is same as above. Remember --> List can contains another lists.
+
+2.1 Indexing: Accesing list elements 
+Python uses zero-based indexing, meaning the first element has index 0.
+The index tells python which position you want.
+
+Code:
+
+languages = ["Python", "Java", "C++", "Javascript"]
+print(languages[0]) #Python
+print(languages[1]) #Java
+print(languages[-1]) #Javascript
+print(languages[-2]) #C++
+
+Important point - Negative indexing starts from the end: -1 is the last element.
+
+2.2 Slicing: extracting a portion of the list 
+
+syntax:
+
+Code:
+
+list_name[start:stop:step]
+
+***Important point -> The Stop index is excluded.
+
+Code:
+
+numbers=[10,20,30,40,50,60]
+print(numbers[1:4])
+print(numbers[:3])
+print(numbers[3:])
+print(numbers[::2])
+print(numbers[::-1])
+
+IMPORTANT POINT -> Slicing is especially useful when you want to extract data without changing the original list.
+
+Output of the aboev code:
+
+[20,30,40]
+[10,20,30]
+[40,50,60]
+[10,30,50]
+[60,50,40,30,20,10]
+
+2.3 Lists are mutable, which means you can change their contents.
+
+Code:
+
+
+
+
+
+
