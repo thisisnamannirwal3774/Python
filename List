@@ -205,7 +205,98 @@ for n in range(1,6):
     squares.append(n**2)
 print(squares)
 
+Code by Comprehension Approach:
 
+squares=[n**2 for n in range(1,6)]
+print(squares)
+
+Both of the above Code will produce same output:
+
+[1,4,9,16,25]
+
+Important --> You can also add a condition. 
+
+Code:
+
+even_numbers = [n for n in range(1,11) if n%2==0]
+print(even_numbers)
+
+Output of this Code:
+
+[2, 4, 6, 8, 10]
+
+VERY IMPORTANT --> You can also transform values conditionally.
+
+Code:
+
+result = ["Even" if n%2==0 else "odd" for n in range(1,6)]
+print(result)
+
+Output of the above Code:
+
+['odd', 'Even', 'odd', 'Even', 'odd']
+
+
+2.8 Nested Lists
+
+A list can contain other lists. This is useful for matrices and tables.
+
+Code:
+
+matrix = [ [1,2,3], [4,5,6], [7,8,9] ]
+print(matrix[0]]
+print(matrix[1][2]]
+print(matrix[2][0]]
+
+Output of this code:
+
+[1,2,3]
+6
+7
+
+About the Code: Here matrix[1][2] means row index 1, then column index 2.
+
+2.9 Copying and references 
+
+This is a common source of bugs.
+
+a=[10,20,30]
+b=a
+b.append(40)
+print(a)
+print(b)
+
+Output :
+
+[10,20,30,40]
+[10,20,30,40]
+
+VERY IMPORTANT POINT -> A is changing because a and b refers to the same list.
+
+To make a separate "shallow" copy.
+
+Code:
+
+a=[10,20,30]
+b=a.copy()
+b.append(40)
+print(a)
+print(b)
+
+Output:
+
+[10,20,30]
+[10,20,30,40]
+
+About the Code; A shallow Copy is enough for flat list. With nested lists, inner lists can be shared. For a fully independent copy of nested mutable data use "copy.deepcopy()" when appropriate.
+
+2.10 List as a Stack
+
+A stack follows LIFO, Last in First out.
+
+imagine a stack of plates. You take the top plate first.
+
+Code:
 
 
 
