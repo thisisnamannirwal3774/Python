@@ -298,6 +298,35 @@ imagine a stack of plates. You take the top plate first.
 
 Code:
 
+stack=[]
+stack.append("Plate 1")
+stack.append("Plate 2")
+stack.append("Plate 3")
+print(stack.pop())
+print(stack.pop())
+
+Output :
+
+Plate 3 
+Plate 2
+
+About the Code: Lists are excellent for implementing simple stacks.
+
+2.11 Lists Time Complexity
+
+operation                                    Typical time 
+access by index                              O(1)
+append to end                                O(1) amortized 
+search for a value                           O(n)
+Insert or delete near beginning              O(n)
+sort                                         O(nlogn)
+
+About the data: the notation describes how the work grows as the list gets larger. Amortized O(1) means append is constant time on average over many operations, even though occasional 
+resizing costs more. 
+
+
+
+
 
 
 
