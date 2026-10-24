@@ -163,7 +163,49 @@ print(sorted(marks)) #[65,70,75,80,90]
 
 ***IMPORTANT point to remember -> sorted(marks) created a new sorted list. marks.sort() changes the existing list.
 
-2.6 
+2.6 Looping through a list
+
+A loop allows you to process every element.
+
+Code:
+
+languages=["Python","Java","C++"]
+for language in languages:
+    print(language)
+
+Output of the Code:
+
+Python
+Java 
+C++
+
+Important -> You can also get both the index and the value.
+
+Code:
+
+for index, language in enumerate(languages):
+    print(index, language)
+
+Output of the Above code:
+
+0 Python
+1 Java 
+2 C++
+
+Important --> remember the Word "Enumerate" .. it is useful in looping and printing the index and the value at the corresponding index.
+
+2.7 List comprehension 
+
+List Comprehension is a shorter way to create a list using an expression and a loop.
+
+Code by Ordinary Approach:
+
+Squares=[]
+for n in range(1,6):
+    squares.append(n**2)
+print(squares)
+
+
 
 
 
