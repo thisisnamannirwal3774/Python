@@ -599,6 +599,24 @@ Output:
 
 He said, "Hello!"
 
+7.1 Raw strings 
+
+A raw string treats backslashes as ordinary characters for most escape sequence purposes.
+
+Code:
+
+print(r"C:\new\test")
+
+Output
+
+C:\new\test
+
+VERY important about the code --> without the r prefix, sequence such as \n may be intrepreted as 
+special characters. Raw strings are particularly useful for windows paths and some regular expressions.
+A raw string literal still has restrictions, such as not being allowed to end in a single backslash.
+
+
+
 
 
 
