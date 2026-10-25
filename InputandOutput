@@ -402,6 +402,103 @@ Naman
 22
 75.6
 
+Important --> The split() method separates the input into pieces using whitespace by default.
+
+5.2 taking two integers in one line
+
+a,b=map(int, input("Enter two numbers ").split())
+print(a+b)
+
+If we provide the input .. 10 20
+
+Output
+
+30
+
+Lets break down the expression:
+
+1. input() receives something like "10 20"
+2. .split() produces ["10", "20"]
+3. map(int, ...) converts each piece to an integer.
+4. a,b = assigns the resulting values to two variables.
+
+5.3 taking a list of numbers 
+
+Code:
+
+numbers = list(map(int, input("Enter numbers ").split()))
+print(numbers)
+
+If we provide the input 10,20,30,40,50 output would be 
+
+[10,20,30,40,50]
+
+VERY IMPORTANT --> This technique is especially useful in coding competitions and algorithm problems.
+
+5.4 taking multiple decimal numbers
+
+Code
+
+numbers=list(map(float, input().split()))
+print(numbers)
+
+If we give input as following... 1.5 2.5 3.75 
+
+Output would be:
+
+[1.5, 2.5, 3.75]
+
+6. formatted output in python 
+
+formatted output means displaying values in a clean, readable way.
+
+Python provides three common approaches.
+
+6.1 Using commas in print()
+
+Code:
+
+name="Naman"
+marks=90
+print("Student:", name, "marks:", marks)
+
+Output:
+
+Student: Naman marks: 90
+
+This is simple and begineer friendly.
+
+6.2 using f-strings
+An f-string is one of the most convient ways to put variables inside text.
+
+Code:
+
+name="NamanNirwal"
+age=22
+print(f"My name is {name} and I am {age} years old")
+
+Output
+
+My name is NamanNirwal and I am 22 years old
+
+The f before the quotation marks tells python to evaluate expressions inside {}.
+
+We can also perform calculations inside an f-string.
+
+Code:
+
+a=10
+b=20
+print(f"the product is {a*b}")
+
+output:
+
+200
+
+
+
+
+
 
 
 
