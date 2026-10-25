@@ -556,7 +556,50 @@ Output:
 
 Name: Naman, Age: 22
 
-common format specifiers include %s for string formatting, %
+common format specifiers include %s for string formatting, %d for integers and %f for floating 
+point numbers.
+
+We should recognize this syntax, although f-strings are usually easier to read.
+
+7. Escape characters in output
+
+Escape characters help you display special characters.
+
+character                    meaning
+\n                          New Line
+\t                          Tab space
+\\                          Backslash
+\'                          Single quotation marks 
+\"                          double quotation marks 
+
+Code
+
+print("Hello\nWorld")
+
+Output:
+
+Hello
+World
+
+tab example:
+
+print("Name\tage")
+print("Naman\t22")
+
+Output:
+
+Name   age
+Naman   22
+
+Displaying quotation marks:
+
+print("He said, \"Hello!\"")
+
+Output:
+
+He said, "Hello!"
+
+
 
 
 
