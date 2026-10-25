@@ -1,0 +1,59 @@
+1. what is file handling ?
+Solution. file handing means using python to create, open, read, write, update and delete files stored on your computer.
+
+For example. Imagine you are building a student management system. You want to save student names marks so that the data is still available after you close the program. file handling makes that possible.
+
+Code :
+
+name="Naman"
+print(name)
+
+the name exists in your program while it runs, but it isn't automatically saved for the next run.
+
+now let us consider another code:
+
+file=open("student.txt","w")
+file.write("Naman")
+file.close()
+
+Python creates a file named student.txt if it does not exist and writes "Naman" to it. The next time you run another program, you can read that file and retrieve the saved text.
+
+2. the four main file operations 
+
+1. create or open a file 
+   Use open() to access a file, creating it in modes that permit creation when needed.
+2. read 
+   retrieve existing information with read(), readline() or iteration.
+3. write or append 
+   save new content or add content to existing files 
+4. Manage files 
+   rename, move, copy or delete files using appropriate Python tools.
+
+PART 1 --> OPENING AND CLOSING FILES 
+
+3. The open() function 
+
+The basic syntax is:
+
+Code:
+
+file=open("filename.txt","mode")
+
+VERY IMPORTANT --> There are two important parts:
+
+1. filename.txt : the name or path of the file 
+2. mode : this mode tells python what do you want to do it.
+
+Code:
+
+file=open("notes.txt","r")
+
+VERY IMPORTANT --> This opens notes.txt for reading. If the file does not exist, Python raises a FileNotFoundError.
+
+4. All important files modes 
+
+
+
+
+
+
