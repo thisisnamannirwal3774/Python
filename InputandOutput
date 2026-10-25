@@ -197,6 +197,109 @@ Loading...done
 
 Remember: 
 
+sep: controls the space or separator between values.
+end: controls what appears after the printed output.
+
+2.3 VERY IMPORTANT --> Combining sep and end 
+
+Code:
+
+print("A","B","C",sep=":",end="!")
+print("Python")
+
+Output:
+
+A:B:C!Python
+
+Remember --> Notice the gap between quotation marks.
+
+This is useful when formatting output exactly as required.
+
+3. input in python: input()
+
+The input() functions take information from the user through the keyboard.
+
+Code:
+
+name=input("Enter your name:")
+print("Your name is", name)
+
+output:
+
+Enter your name: naman
+Your name is Naman
+
+Let's understand each line:
+
+1. input("Enter your nam: ") displays a prompt and waits for you to type something.
+2. when you press Enter, python returns the entered text.
+3. name=stores that text in the variable name.
+4. print() dispalys the stored value.
+
+3.1 Taking input without a message.
+
+you can also write:
+
+Code:
+
+name=input()
+print(name)
+
+Output:
+
+we enter-> Naman
+Naman
+
+The program waits for input even though no prompt is diplayed.
+
+3.2 VERY important --> input() returns a string 
+
+Code:
+
+age=input("Enter your age: ")
+print(type(age))
+
+Even if you type a number, for example, say 22, it returns as following.
+
+<class 'str'>
+
+Why ? Because input() returns a string, even if the user enters the number.
+
+VERY IMPORTANT Code:
+
+a=input("Enter the first number:")
+b=input("Enter the second number:")
+print(a+b)
+
+Output:
+
+Even if you enter 10 20 ...it result as following
+
+1020
+
+Python joins the strings instead of adding the numbers.
+To perform mathematical calculations, we need type conversions.
+
+4. Type Conversion with input 
+Type conversion means changing a value from one data type to another.
+
+4.1 Converting input to an integer: int()
+
+Code:
+
+a=int(input("enter the first number"))
+b=int(input("enter the second number"))
+print(a+b)
+
+If we type 10 and 20
+
+Output
+
+30
+
+H
+
+
 
 
 
