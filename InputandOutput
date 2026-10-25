@@ -382,6 +382,28 @@ if answer=="Yes":
 else:
    print("You did not enter yes")
 
+5. taking multiple inputs in one line 
+Sometimes, we want a user to enter multiple values on a single line.
+
+5.1 using spilt()
+
+Code:
+
+name,age,percentage=input("Please enter name, age, and percentage").spilt()
+print(name)
+print(age)
+print(percentage)
+
+If we enter Naman 22 75.6 then output will be:
+
+Output:
+
+Naman
+22
+75.6
+
+
+
 
 
 
