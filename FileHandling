@@ -98,6 +98,108 @@ Code:
 
 with open("notes.txt", "w") as file:
      file.write("Learning Python")
+print("file saved!")
+
+Once the indented bloack ends, Python closes the file for us.
+Important point to remember: Prefer with open(...) over manually calling close() in ordinary file handling code.
+
+PART 2: WRITING DATA TO A FILE
+
+7. The write() method
+
+The write() method saves a string into a text file.
+
+Code:
+
+with open("filename.txt","w") as file:
+     file.write("Name: Naman\n")
+     file.write("Course: MTech\n")
+     file.write("subject: Python\n")
+
+the file will contain:
+
+Name: Naman
+Course: MTech
+subject: Python
+
+what does \n means ?
+Solution. \n is the new line character. It moves the next text to the new line.
+
+Code:
+
+with open("example.txt","w") as file:
+     file.write("Hello\n")
+     file.write("World")
+
+Output ( a new txt file will create naming example.txt )
+contents is as following:
+
+Hello
+World
+
+Without \n, consecutive calls to write() do not automatically add line breaks.
+
+****VERY IMPORTANT --> Does write() return anything ?
+It returns the number of characters written in text mode.
+
+Code:
+
+with open("example.txt","w") as file:
+     result=file.write("Python")
+     print(result)
+
+Output:
+
+6
+
+8. Difference between "w" and "a"
+
+this is one of the most important concepts in file handling.
+
+Write mode: "w" 
+Replaces the existing contents
+
+Code:
+
+with open("notes.txt","w") as file:
+     file.write("New Content")
+
+Append mode: "a"
+Keeps existing contents and adds new content at the end.
+
+Code:
+
+with open("notes.txt","a") as file:
+     file.write("\nMore Content")
+
+9. The writelines() method 
+writelines() writes multiple strings to a file.
+
+Code:
+
+lines = [ 
+       "Python\n",
+        "Java\n",
+        "C++\n"
+]
+with open("langauges.txt","w") as file;
+     file.writelines(lines)
+
+VERY IMPORTANT --> Notice that writelines() does not add newline characters automatically. Thats why each string above includes \n.
+
+a useful alternative of writelines():
+
+Code:
+
+languages = ["Python", "Java", "C++"]
+with open("languages.txt","w") as file:
+     file.write("\n".join(languages))
+
+This joins the strings with newline separators.
+
+
+
+
 
 
 
