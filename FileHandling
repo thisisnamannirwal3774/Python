@@ -298,6 +298,91 @@ Course:Mtech
 
 Subject: Python
 
+But if the code would look like this:
+
+with open("student.txt","r") as file:
+     for line in file:
+          print(line,end="")
+
+Output will be as following.
+
+Name: Naman
+Course: Mtech
+subject: Python
+
+this processes one line at a time, instead of loading the entire file into the memory.
+Why use end=""? Because the line may already contain the newline. without it, print() may add another newline and produce unwanted
+blank lines.
+
+PART 4: FILE POSITIONS AND ADVANCED READING 
+
+14. Understanding tell() and seek()
+
+think of a file as a line of text and the file position as a cursor that indicates where the next read or write will occur.
+tell(): reports the current stream position
+seek(): changes the stream position.
+
+Code:
+
+with open("example.txt","w") as file:
+     file.write("ABCDEFG")
+with open("example.txt","r") as file:
+     print(file.tell()) #0
+     print(file.read(3)) #ABC
+     print(file.tell()) #3
+     file.seek(0)
+     print(file.read(2)) #AB
+
+Suppose in our "filename.txt" this contains:
+NameNamannirwal 
+
+And the code is:
+
+with open("filename.txt","r") as file:
+     print(file.tell()) #0
+     print(file.read(4)) #ABCD
+     print(file.tell()) #4
+     file.seek(0)
+     print(file.read(15)) #NameNamanNirwal
+
+In this simple ASCII text example, the position advances from 0 to 3 after reading 3 characters. Text mode positions can be more
+complicated with encodings and new line translation, so dont always interpret them as ordinary character indexes.
+
+What does seek() do ?
+
+Code:
+
+file.seek(0)
+
+This returns to the begining of the file.
+
+For binary files, seek() can also be used to move to a byte offset.
+
+Code:
+
+with open("data.bin","rb") as file:
+     file.seek(5)
+     print(file.read(3))
+
+This reads three bytes starting at byte offset 5, provided that the file containing enough bytes.
+
+PART 5: FILES PATHS AND FOLDERS
+
+15. relative paths vs absolute paths
+
+A file can be located in the current working directory or somewhere else.
+
+Relative path:
+
+with open("notes.txt","r") as file:
+     print(file.read())
+
+It will print all the data in the corresponding file.
+
+Python resolves this relative to program's current working directory not necessarily the folder containing your script.
+
+Absolute Path on MacOs:
+
 
 
 
