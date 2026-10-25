@@ -52,6 +52,54 @@ VERY IMPORTANT --> This opens notes.txt for reading. If the file does not exist,
 
 4. All important files modes 
 
+mode                         meaning                                  if the file does not exist 
+"r"                          read                                     raises an error
+"w"                          write, replacing existing contents       creates it
+"a"                          append to the end                        creates it
+"x"                          creates a new file exclusively           creates it, but errors if it already exists
+"r+"                         read and write without truncating at open   raises an error
+"w+"                         read and write, replacing existing contents      creates it
+"a+"                         read and append                          creates it
+
+we can also use "b" for binary mode and "t" for text mode.
+
+For example Code:
+
+open("photo.jpg","rb") #read binary data
+open("notes.txt","rt") #read text, same as "r"
+
+VERY IMPORTANT --> "w" immediately truncates an existing file, meaning its previous content are erased.
+Use "a" that is append when we want to preserve existing contents and add more.
+
+5. closing a file 
+
+when you open a file manually, you should close it when you are finished.
+
+Code
+
+file=open("notes.txt","w")
+file.write("Learning Python")
+file.close()
+
+What happens is as following.
+
+The python interpreter search for a file naming "notes.txt" , creates it if it doesnot exist and delete all its contents
+if it exists and write "Learning Python" on it and close the file.
+
+Why close it ?
+
+It releases system resources. It helps ensure buffered output is flushed. It prevents files from being left open unncessarily.
+But there is a safer and more convenient way.
+
+6. The "with" statement, the recommended method 
+Python developers generally prefer with open(...) becauses it closes the file automatically, even if an exception occurs.
+
+Code:
+
+with open("notes.txt", "w") as file:
+     file.write("Learning Python")
+
+
 
 
 
