@@ -297,7 +297,94 @@ Output
 
 30
 
-H
+How this Work ?
+
+1. input() receives text
+2. int() converts that text to an integer.
+3. + adds the two integers.
+
+4.2 Converting input to a float: float()
+use float() when you need decimal numbers 
+
+Code:
+
+price=float(input("Enter the price:"))
+print(price)
+
+If you enter 23, python stores it as 23.0 and print it
+
+Code:
+
+a=float(input("enter the first decimal"))
+b=float(input("Enter the second decimal"))
+print(a+b)
+
+Output
+
+If we enter first decimal as 23.0 and second decimal as 46.0 .. then the resultant output is as 
+following 69.0
+
+4.3 Converting input to a string: str()
+IMPORTANT --> The result of input() is already a string, but str() is useful for converting other 
+values into text.
+
+Code
+
+age = 22
+message="my age is" + str(age)
+print(message)
+
+output
+
+my age is 22
+
+VERY IMPORTANT --> without str(age), python would raise a typeerror when you try to concatenate a 
+string and an integer using +.
+
+We dont concatenate a string and a number.
+
+4.4 Converting input to a boolean
+
+python's bool() function converts values to boolean values, true or false.
+
+Code:
+
+print(bool(1))
+print(bool(0))
+print(bool(""))
+print(bool("Hi"))
+
+Output:
+
+True
+false
+false
+True
+
+VERY IMPORTANT --> Be careful with user input.
+
+Code
+
+answer=input("Do you agree")
+print(bool(answer))
+
+Output
+
+True
+
+Even if you enter false, it displays the answer as true as this is non empty string.
+
+Code:
+
+answer=input("Do you agree? ").strip().lower()
+if answer=="Yes":
+   print("You agreed")
+else:
+   print("You did not enter yes")
+
+
+
+
 
 
 
