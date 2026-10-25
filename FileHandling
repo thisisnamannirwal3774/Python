@@ -197,6 +197,112 @@ with open("languages.txt","w") as file:
 
 This joins the strings with newline separators.
 
+PART 3: Reading data from a file
+
+10. the read() method
+
+Suppose student.txt contains
+
+Name: Naman
+Course: MTech
+Subject: Python
+
+We can read all its contents.
+
+Code:
+
+with open("student.txt","r") as file:
+     content=file.read()
+print(content) 
+
+Important point --> read() returns the file contents as a string.
+
+Important --> reading a specific number of characters
+
+Code:
+
+with open("student.txt","r") as file:
+     content=file.read(4)
+print(content)
+
+It will print only 4 characters or the characters mentioned in the enclosed brackets.
+
+The number 4 represents how many "characters" to read, not how many lines. 
+calling read() again continues from the current file position.
+
+11. the readline() method:
+
+the readline() reads one line "at a time".
+
+Code:
+
+with open("student.txt","r") as file:
+     first=file.readline()
+     second=file.readline()
+print(first)
+print(second)
+
+Suppose if the text contains:
+
+Name: Naman
+Course: Mtech
+Subject: Python
+
+Then the output of the code would be:
+
+Name: Naman
+Course: Mtech
+
+The returned lines normally include their newline characters, if present.
+this method is useful when you want to process a file "one line at a time".
+
+12. the readlines() method
+
+readlines() reads all "remaining lines" into a list
+
+Code:
+
+with open("student.txt","r") as file:
+     lines=file.readlines()
+print(lines)
+
+Output of the Code would be:
+
+["Name: Naman\n", "Course: Mtech\n", "Subject: Python\n"]
+
+IMPORTANT POINT TO REMEMBER --> lines is the list. It will treated as the list.
+
+Unlike readline(), this returns a list of strings. For very large files, however, loading every line into memory may be inefficient.
+
+13. BEST WAY TO READ A LARGE TEXT FILE
+
+We can "loop" over the file directly.
+
+If the input contains this.
+
+Name: Naman
+course: MTech
+Subject: Python
+
+Code:
+
+with open("student.txt","r") as file:
+     for line in file:
+         print(line)
+
+Output: 
+
+Name: Naman
+
+Course:Mtech
+
+Subject: Python
+
+
+
+
+
+
 
 
 
