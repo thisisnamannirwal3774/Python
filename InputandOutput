@@ -122,3 +122,82 @@ Output:
 Student: NamanNirwal
 marks: 90
 
+2. the important parameters of print()
+
+the print() has several useful parameters. the most important are sep and end.
+
+2.1 the "Sep" parameter 
+
+sep means separator. It controls what appears between multiple values.
+
+Code:
+
+print("Python","Java","C++",sep="&")
+
+Output:
+
+Python&Java&C++
+
+another example (CODE) :
+
+print(10,20,30,sep=" | ")
+
+output:
+
+10 | 20 | 30
+
+Very important --> Sep is a single space.
+
+2.2 the "end" parameter
+
+Very Very important ---> by default, print() moves to a new line after displaying its output.
+
+Code:
+
+print("Hello")
+print("world")
+
+Output:
+
+Hello
+world
+
+Important --> print() moves to new line after displaying the output.
+
+We can change this behaviour with "end" parameter.
+
+Code:
+
+print("Hello", end="")
+print("world")
+
+Output:
+
+HelloWorld
+
+Code:
+
+print("Hello", end=" ")
+print("World")
+
+Output:
+
+Hello World
+
+VERY IMPORTANT --> notice that gap between quotation marks in end.
+
+Code:
+
+print("Loading",end="...")
+print("done")
+
+Output:
+
+Loading...done
+
+Remember: 
+
+
+
+
+
