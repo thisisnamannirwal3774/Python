@@ -1,0 +1,95 @@
+1. What is a Linked List ?
+Solution: A linked list is a data structure used to store the collection of elements. It is similar to a python list, but the way it stoes
+and connect elements is different. 
+We'll learn it step by step, from creating our first node to implementing a complete linkedlist with insertion, deletion, searching,
+reversing and advance interview problems.
+
+2. What is a linkedlist ?
+Solution: Imagine a train. Each coach contains some information and is connected to the next coach.
+
+A singly linked list :
+
+10 -> 20 -> 30 -> None
+data  data  data 
+
+Each nodes stores data, and a reference to the next node. The last node points to None.
+
+A linked list consits of three important concepts:
+
+1. Node: Stores an element and a link to another node.
+2. Head: points to the first node
+3. Next: points to the next node, or None if there is not one.
+
+Python List vs LinkedList
+
+Feature                            Python List                     LinkedList
+storage                            dynamic Array                   connected nodes
+access by index                    O(1)                            O(n)
+insert at the beginning            O(n)                            O(1)
+search by value                    O(n)                            O(n)
+Extra memory per element           usually lower                   stores the next reference
+
+VERY IMPORTANT -> Python's built in list is not the linkedlist. We build one ourselves to understand how the data structure works.
+
+3. Creating the first linked list node 
+
+First we need a class to represent one node.
+
+Code:
+
+def __init__(self, data):
+    self.data = data
+    self.next = None
+
+Let's understand each line:
+
+1. Class Node: defines a blueprint for creating nodes 
+2. __init__(): initialises each new node.
+3. self.data=data stores the node's value
+4. self.next=None initially means the node is not connected to another node.
+
+Creating a node:
+
+Code:
+
+n1=node(10)
+print(n1.data)
+print(n1.next)
+
+Output of the Code is as following:
+
+10
+None
+
+At this point, we have just created one node.
+
+Now connectb two node:
+
+Code:
+
+n1=Node(10)
+n2=Node(20)
+n1.next=n2
+n2.next=None # this is by default, no need to write this 
+print(n1.data)
+print(n1.next.data)
+
+Output:
+
+10
+20
+
+The Connection n1.next=n2 links the first node to the second node.
+you have now built the foundation of the linked list.
+
+4. Build a complete Singly Linked List 
+
+Very Important --> Instead of creating and connecting nodes manually, lets create a LinkedList class that manages them.
+We will begin with three operations.
+1. Insert a node at the end 
+2. Display all nodes
+3. Count the nodes
+
+Code:
+
+Clas
