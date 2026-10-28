@@ -294,7 +294,111 @@ VERY IMPORTANT ---> These checks are case sensitive.
 
 code:
 
+print("python" in "Python") # returns false as p is required smaller.
 
+11. iterating through a string 
+
+You can use a loop to process each character.
+
+Code:
+
+text="PYTHON"
+for char in text:
+   print(char)
+
+Output:
+
+P
+Y
+T
+H
+O
+N
+
+IF we want to print the index along with the value. then use enumerate():
+
+Code:
+
+text="I love Python"
+for index, char in enumerate(text):
+    print(index, char)
+
+Output:
+
+0 I
+1 
+2 l
+3 o
+4 v
+5 e
+6 
+7 p
+8 y
+9 t
+10 h 
+11 o
+12 n
+
+This is useful for string-processing problems in DSA.
+
+12. Comparing Strings
+
+python supports comparison operators such as =, !=, < and >.
+
+Code:
+
+print("Python" == "Python")
+print("Python" == "python")
+print("cat" != "Dog")
+
+Output:
+
+True
+False
+True
+
+Very important --> String ordering is lexicographical, based on character code points.
+
+Code:
+
+print('apple' < 'banana') #True
+
+This comparison does not means that python understand the meaning of words. It compares their character sequences.
+
+LEVEL 3. PYTHON STRING METHODS
+
+A string method is a built in operation that you call on a string, usually using dot notation.
+
+For example:
+
+Code:
+
+text="Hello"
+print(text.upper())
+
+Output:
+
+HELLO
+
+13. CHanging letter case
+
+1. upper()
+
+Code:
+
+"python".upper() #PYTHON
+
+2. lower
+
+Code:
+
+"PYTHON".lower() #python
+
+3. capitalize 
+
+Code:
+
+"hello world".capitalize() #Hello World
 
 
 
