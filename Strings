@@ -109,3 +109,93 @@ Y
 H
 N
 
+IMportant --> Accessing an index outside the string's valid range raise an IndexError.
+
+5. Negative Indexing 
+
+Python also lets you access characters from the end.
+
+Code:
+
+text="PYTHON"
+print(text[-1])
+print(text[-2])
+print(text[-3])
+
+Output:
+
+N
+O
+H
+
+The last character has an index -1, the second last index -2, and so on.
+
+6. Slicing Strings
+
+Slicing extracts a part of the String.
+
+Syntax:
+
+Code:
+
+string[start:end:step]
+
+About the start, stop, and step:
+
+Start: index where extraction begins.
+Stop: index where extraction ends, not included.
+Step: how many positions to move each time.
+
+Code:
+
+name="Naman Nirwal"
+print([::0])
+
+Output:
+
+this raises the ValueError
+
+Code:
+
+name="Naman Nirwal"
+print([::1])
+
+Output:
+
+Naman Nirwal #default is 1
+
+Code:
+
+text="PYTHON"
+print(text[0:3])
+print(text[2:5])
+print(text[:4])
+print(text[2:])
+print(text[::2])
+print(text[::-1])
+print(text[::-2])
+
+Output:
+
+PYT
+THO
+PYTH
+THON
+PTO
+NOHTYP
+NHY
+
+IMPORTANT --> The second last example reverses the string using a slice with a step of -1.
+
+7. strings are immutable
+
+This is one of the most important concepts in python.
+
+Immutable means we cannot change individual characters of an existing strings.
+
+Code:
+
+text="PYTHON"
+text[0]="p" #this will create an issue known as type error
+
+
