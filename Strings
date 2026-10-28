@@ -400,5 +400,19 @@ Code:
 
 "hello world".capitalize() #Hello World
 
+4. title()
+
+Code:
+
+"hello world".title()  #Hello World
+
+5. swapcase()
+
+Code:
+
+"pytHon".swapcase() #PYThON
+
+These methods return new strings. they dont mutate the original string.
+
 
 
