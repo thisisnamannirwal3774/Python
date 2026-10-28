@@ -198,4 +198,103 @@ Code:
 text="PYTHON"
 text[0]="p" #this will create an issue known as type error
 
+To produce "JYTHON", create a new string.
+
+Code:
+
+text="Python"
+text="J"+text[1:]
+print(text)
+
+output:
+
+Jython
+
+The original string was not modified character by character. a new string was created and assigned to the text.
+
+LEVEL 2: BASIC STRING OPERATIONS
+
+8. Concatenation: joining strings
+
+Concatenation means joining two or more strings using +.
+
+Code:
+
+first="hello"
+second="world"
+result=first+" "+second
+print(result)
+
+Output:
+
+hello world 
+
+Remember to see " " in the middle of the result.
+
+IMPORTANT --> we can't directly concatenate a string and an integer.
+
+Code:
+
+age=22
+print("Age: " + age) #typeerror
+print("Age: " + str(age)) 
+
+#the str function converts the integer into a string.
+
+VERY important point to remember is that we cannot concatenate a string and a number.
+
+9. Repetition using *
+
+we can repeat a string using the multiplication operator.
+
+Code:
+
+print("Hi" * 3)
+
+Output:
+
+HiHiHi
+
+Code:
+
+print("Hi " *3 )
+
+Output:
+
+Hi Hi Hi
+
+IMPORTANT --> Remember to see the space between. 
+
+Code:
+
+print("-" *10)
+
+Output:
+
+----------
+
+10. Memembership operators in and not in.
+
+Use these operators to check whether a substring or character occurs inside another string.
+
+Code:
+
+text=" I love python"
+print("python" in text)
+print("Java" in text)
+print("java" not in text)
+
+Output:
+
+True
+False
+True
+
+VERY IMPORTANT ---> These checks are case sensitive.
+
+code:
+
+
+
+
 
