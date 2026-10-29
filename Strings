@@ -414,5 +414,104 @@ Code:
 
 These methods return new strings. they dont mutate the original string.
 
+14. Removing spaces and characters
+
+the strip() family removes specified characters from the ends of the string.
+
+Code:
+
+text="   hello   "
+print(text.strip())
+print(text.lstrip())
+print(text.rstrip())
+
+Output:
+
+'hello'
+'hello   '
+'   hello'
+
+We can also provide "characters" to remove.
+
+Code:
+
+text="###Python#####"
+text1="###x"
+print(text.strip("#"))
+print(text1.strip("#"))
+
+Output:
+
+Python
+x
+
+Important --> by default it removes white space characters unless specially given.
+Strip("#") removes any # characters from both ends, not an exact substring in the middle.
+
+15. searching inside a string
+
+the key methods are find(), refind(), index() and count().
+
+Code:
+
+text="banana"
+print(text.find("na")) 
+print(text.rfind("na"))
+print(text.count("a")) 
+
+Output:
+
+2
+4
+3
+
+About the find, rfind(), index() and count().
+
+find() --> returns the first matching index or -1 if its does not exist
+rfind() --> returns the last matching index or -1 if its does not exist.
+count() --> counts non overlapping sequences.
+index() --> works like find(), but raises ValueError if the substring is absent.
+
+Code:
+
+print("banana".index("xyz")) #ValueError
+print("banana".find("xyz")) #-1
+
+16. replacing text
+
+The replace() method replaces occurences of one substring with another.
+
+Code:
+
+text="I like Java"
+result=text.replace("Java","Python")
+print(result)
+
+output:
+
+I like Python
+
+Code:
+
+text="I like Java"
+result=text.replace("Java","Python")
+print(result)
+print(text)
+print(text.replace("like","love"))
+
+output:
+
+I like Python
+I like Java
+I love Java
+
+
+
+
+
+
+
+
+
 
 
