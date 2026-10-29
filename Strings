@@ -597,12 +597,119 @@ istitle()                   The string follows python's title-case rules.
 
 code:
 
-print("Python".isalpha())   # True
-print("12345".isdigit())    # True
-print("Python123".isalnum()) # True
-print("   ".isspace())      # True
-print("hello".islower())    # True
-print("HELLO".isupper())    # True
+print("Python".isalpha()) #true
+print("12345".isdigit()) #true
+print("Python123".isalnum()) #true
+print(" ".isspace()) #true
+print("hello".islower()) #true
+print("HELLO".isupper()) #true
+
+this works differently. although 12345 is number but we have enclosed in double commas.
+print(12345.isdigit()) #this raise a Syntax error
+
+these methods return boolean values true or false.
+
+LEVEL 4: FORMATTING AND INPUT 
+
+20. f-strings
+
+F-strings let you insert variables and expressions directly into a string.
+
+Code:
+
+name="NamanNirwal"
+age=22
+print(f"my name is {name} and I am {age} years old")
+
+Output:
+
+my name is NamanNirwal and I am 22 years old
+
+We can also calculate "expressions" inside the braces.
+
+Code:
+
+a=10
+b=20
+print(f"sum is {a+b}")
+
+Output:
+
+sum is 30
+
+21. formatting numbers
+
+f strings can control decimal places and numeric presentation.
+
+Code:
+
+price=123.4567
+print(f"{price:.2f}")
+
+123.46
+
+VERY IMPORTANT --> the .2f displays two digits after the decimal point.
+
+Code:
+
+text=123.4567
+print(f"{text:.3f}")
+
+Output:
+
+123.457
+
+Remember to add . in after semicolon to represent that after dot product.
+
+The .2f format displays two digits after the decimal point.
+
+Code:
+
+number=1000000
+print(f"{number:,}")
+
+output:
+
+1,000,000
+
+22. taking input string 
+
+The input () function returns the entered value as the string.
+
+Code:
+
+name=input("Enter your name")
+print("hello", name)
+
+Output:
+
+Enter your name NamanNirwal
+hello NamanNirwal
+
+If you enter Naman, the variable name contains "Naman".
+Even if you enter the digits, the result is a string.
+
+Code:
+
+number=input("Enter the number")
+print(type(number)) #<class 'str'>
+
+this is because, by default input is string. 
+
+To convert string into number then we have:
+
+code:
+
+numb=int(input("enter the number")) 
+print(type(numb)) #<class 'int'> 
+
+LEVEL 5. Intermediate string concepts
+
+
+
+
+
+
 
 
 
