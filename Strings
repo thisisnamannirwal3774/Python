@@ -705,6 +705,55 @@ print(type(numb)) #<class 'int'>
 
 LEVEL 5. Intermediate string concepts
 
+23. Escape characters 
+
+Escape sequences let you represent special characters inside strings.
+
+sequence                         Meaning
+\n                                  New Line
+\t                                  tab
+\\                                  backward slash
+\'                                  single quote
+\"                                  double quote
+
+Code:
+
+text="Hello\nPython"
+print(text)
+
+Output:
+
+Hello
+Python
+
+A tab example:
+
+Code:
+
+text="Hello\tPython"
+print(text)
+
+Hello  Python
+
+We can also use triple quoted strings for multiline text.
+
+24. Raw Strings
+
+A raw string, written with an r prefix, treats more blackslashes as literal characters rather than escape 
+sequences. 
+
+Code:
+
+path=r"C:\new\test"
+print(path) #C:\new\test
+
+This is useful for writing windows paths and regular expressions patterns. Raw strings still follow Python's 
+quoting rules. In particular, a raw string cannot end with an odd number of backslashes.
+
+25. checking prefixes and suffixes 
+
+
+
 
 
 
