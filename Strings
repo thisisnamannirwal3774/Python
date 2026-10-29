@@ -595,6 +595,17 @@ islower()                   there is at least one cased character and all cased 
 isupper()                   there is at least one cased character and all cased characters are uppercase
 istitle()                   The string follows python's title-case rules.
 
+code:
+
+print("Python".isalpha())   # True
+print("12345".isdigit())    # True
+print("Python123".isalnum()) # True
+print("   ".isspace())      # True
+print("hello".islower())    # True
+print("HELLO".isupper())    # True
+
+
+
 
 
 
