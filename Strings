@@ -505,6 +505,96 @@ I like Python
 I like Java
 I love Java
 
+We can limit the number of occurences.
+
+Code:
+
+text="apple apple apple"
+print(text.replace("apple","mango",1))
+
+Output:
+
+mango apple apple 
+
+17. VERY IMPORTANT ---> Splitting strings. split()
+
+split() breaks the strings into a "list of strings".
+
+Code:
+
+text="python is easy"
+result=text.split()
+print(result)
+
+Output:
+
+['python', 'is', 'easy']
+
+Very important is that python split the string into a list of strings.
+
+We can specify a separator.
+
+Code:
+
+text="apple,banana,mango"
+fruits=text.split(",")
+print(fruits)
+
+Output:
+
+['apple', 'banana', 'mango']
+
+this is particularly useful when processing input in coding problems.
+
+18. joining strings: join()
+
+join() combines strings from an iterable, placing the chosen separator between them.
+
+Code:
+
+words=["Python","is","easy"]
+result=" ".join(words)
+print(result)
+
+output:
+
+Python is easy
+
+This words works well with tuple also.
+
+Other Examples:
+
+Code:
+
+print("-".join(["2026","10","19"])
+print("".join(["p","y","t","h","o","n"])
+
+Output:
+
+2026-10-19
+python
+
+VERY IMPORTANT: 
+
+Code:
+
+print("".join([p,y])) #this raises a typeerror
+
+remember the syntax: the separator calls join()
+
+19. checking the type of characters
+
+Python provides several useful methods for character classification.
+
+Method                      Returns TRUE value when
+isalpha()                   All characters are alphabetic and string is non empty
+isdigit()                   All characters are digits and string is non empty
+isalnum()                   All characters are alphabetic or numeric and string is non empty
+isspace()                   all characters are white spaces and string is non empty
+islower()                   there is at least one cased character and all cased characters are lowercase
+isupper()                   there is at least one cased character and all cased characters are uppercase
+istitle()                   The string follows python's title-case rules.
+
 
 
 
