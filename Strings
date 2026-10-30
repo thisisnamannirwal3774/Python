@@ -752,6 +752,53 @@ quoting rules. In particular, a raw string cannot end with an odd number of back
 
 25. checking prefixes and suffixes 
 
+use startswith() and endswith() to check the beginning or end of the string.
+
+Code:
+
+filename="report.pdf"
+print(filename.startswith("report")) #True
+print(filename.endswith("pdf")) #True
+print(filename.endswith(".txt")) #False
+
+VERY IMPORTANT --> We can also pass a tuple of possible suffixes.
+
+Code:
+
+filename="report.txt"
+print(filename.endswith((".txt",".pdf"))
+
+Output:
+
+True
+
+This will return True as one index's value matches the .txt.
+
+26. string alignment 
+
+python can align strings within a specified width.
+
+Code:
+
+text="Python"
+print(text.center(12,"-"))
+print(text.ljust(12,"-"))
+print(text.rjust(12,"-"))
+
+Output:
+
+---Python---
+Python------
+------Python
+
+about the: center(), ljust(), rjust().
+
+center(): centers the string.
+ljust(): aligns it to the left.
+rjust(): aligns it to the right.
+
+
+
 
 
 
