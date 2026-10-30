@@ -797,6 +797,51 @@ center(): centers the string.
 ljust(): aligns it to the left.
 rjust(): aligns it to the right.
 
+27. string immutability and memory
+
+Code:
+
+text="Hello"
+text=text+"Hello"
+
+output:
+
+HelloHello
+
+python does not extend the existing string in place. the concatenation produces a new string, and the variable
+text is reassigned to it.
+
+This matters when repeatedly building large strings.
+
+Less efficient for many pieces:
+
+Code:
+
+result=""
+for word in ["python", "is", "powerful"]:
+    result+=word+" "
+print(result)
+
+Output:
+
+python is powerful
+
+a common alternative is:
+
+Code:
+
+words=["python","is","powerful"]
+result=" ".join(words)
+print(result)
+
+Output:
+
+python is powerful
+
+Using join() is generally preferable when combining many strings from a collection.
+
+
+
 
 
 
