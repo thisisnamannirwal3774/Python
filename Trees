@@ -1,0 +1,36 @@
+1. what is a tree data structure ?
+Solution: a tree is a non-linear data structure used to store data in a hierarchical manner. 
+think about a family tree or the folder structure on your computer.
+
+For example:
+
+                a 
+               / \
+              b   c
+            /  \  
+            d   e
+              / / \
+              f g h 
+
+consider this tree:
+
+                          10
+                         /  \
+                        20  30
+                       / \   /
+                      40 50  60
+
+here, 
+
+10 is the root node
+20 and 30 are children of 10
+10 is the parent of 20 and 30
+40, 50 and 60 are leaf nodes
+the connection between two nodes is called an edge.
+
+2. important tree terminologies 
+
+term                              meaning 
+root                              topmost node of a tree
+
+
