@@ -32,5 +32,86 @@ the connection between two nodes is called an edge.
 
 term                              meaning 
 root                              topmost node of a tree
+parent                            node having children 
+child                             node connected below another node
+leaf                              node having no children 
+edge                              connection between two nodes
+sibling                           nodes having same parent 
+subtree                           smaller tree inside a tree
+depth                             distance from root to node
+height                            longest path from node to leaf 
+
+VERY IMPORTANT TO NOTE that -->
+
+height is longest path from node to leaf whereas depth is distance from root to node.
+
+For example:
+
+                     a
+                    / \
+                   b   c
+                  / \ 
+                 d   e
+
+root=a
+children of a = b,c
+parent of d = b
+siblings 1st pair = b and c
+siblings 2nd pair = d and e
+leaf nodes = c,d,e 
+
+leaf nodes are those nodes which are having no children.
+
+3. implementing a tree in python
+
+first, understand how to create a Node.
+
+a node generally contains two things.
+1. data
+2. reference to its children.
+
+Step 1. create a node class
+
+Code:
+
+class Node:
+      def __init__(self, data):
+              self.data=data
+              self.left=None
+              self.right=None
+
+Explanation of this code is as following:
+
+class Node: Creates a Node Class
+self.data:  stores the value
+self.left: Stores the reference to the left child
+self.right: stores the reference to the right child
+None: Means there is no child currently 
+
+Step 2: Create tree nodes 
+
+Code:
+
+class Node:
+    def __init__(self, data):
+          self.data=data
+          self.left=None
+          self.right=None
+root=Node(10)
+root.left=Node(20)
+root.right=Node(30)
+root.left.left=Node(40)
+root.left.right=Node(50)
+
+Our tree looks like this :
+
+                   10
+                  / \
+                 20  30
+                / \
+              40  50
+
+
+
 
 
